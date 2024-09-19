@@ -1,0 +1,49 @@
+Collaborators: Rachel Diamond
+
+find_errors.html page
+
+1. No <!DOCTYPE html> header // line 1
+2. <html> tag never closed (embedded in comment) // line 1
+3. language should be lang when describing website language // line 4
+4. <head> tag never closed // line 7
+5. Body tag never closed (embedded in comment) // line 8
+6. <h1> has no closing tag // line 9
+7. </p> has no opening tag // line 11
+8. Mismatched list tags <ol> and </ul> // line 24
+9. Two closing tags for </li> and </li>. should be <li> and </li> // line 21
+10. <p> tag has no closing tag </p> // line 26
+11. <img element has no alt attribute as backup // line 28
+12. <a> tag is closed with </img> tag // line 30
+13. <td> tag is missing proper closing tag. Indicates incorrect number of rows as result. // line 39
+14. Missing </table> close tag // line 45
+15. source is invalid attribute. Should be src // line 46
+16. Paragraph text not enclosed in anything. Also no strikethrough
+17. <p> element needs to use style attribute to set color of the text. // line 50
+18. Syntactically is fine, but there are no actions associated with it so button would actually click. // line 52
+19. <! comment not closed properly. // line 54
+20. Link <a> tag never closed // line 56
+21. Link href attribute never set. Invalid link // line 56
+22. Closing tag for </em> is incorrectly placed. Must go inside closing tag for </p>// line 58
+23. <em> tag is not used for underlining. // line 58
+24. Using <li> tag inside of a <dl> tag is wrong. Use <dd> or <dt> // line 61,62
+25. <h2> tag is closed with an <h3> tag thats not even an end tag. // line 64
+26. Comment incorrectly opened. // line
+
+
+find_errors_2.html
+
+1. No language specified // line 2
+2. head tag never closed // line 4
+3. <h1> tag placed inside of head // line 4
+4. Body tag not opened correctly // line 5
+5. Stray html tag // line 6
+6. Stray div opening tag // line 7
+7. <p> tag never closed // line 8
+8. <strong> tag never closed // line 8
+9. <img> href has attribute src not href // line 10
+10. <img> has no alt attribute specificed // line 10
+11. <h2> never opened only closed. // line 12
+12. <p> tage never opened only closed // line 14
+13. Incorrect comment syntax // line 15
+14. Body tag never closed // line 16
+15. html tag improperly closed. // line 16

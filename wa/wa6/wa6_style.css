@@ -1,0 +1,29 @@
+.image-container {
+    position: relative;
+    display: inline-block; 
+}
+
+.baseImage {
+    display: block;
+    height: 300px;
+    width: auto;
+}
+
+.topImage {
+    position: absolute;
+    bottom: 0;      
+    left: 0;       
+    height: 100px; 
+    width: auto;
+    z-index: 2;
+}
+
+.goalieImage {
+    position: absolute;
+    top: 0;       
+    left: 0;        
+    height: 100px;  
+    width: auto;    
+    z-index: 2;  
+}
+

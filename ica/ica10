@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://biancamz.github.io/biancasophieforrest/pages/style.css">
+    <title>Document</title>
+
+    <style>
+        .accordion {
+      width: 100%;
+      margin: auto;
+      padding-top: 40px;
+    }
+    
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .accordion-header {
+      background-color: #eae4dc;
+      color: #333;
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    
+    .accordion-header:hover {
+      background-color: #c2d4ff;
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 15px;
+    }
+    
+    .accordion-content p {
+      padding: 15px 0;
+      margin: 0;
+    }
+    </style>
+
+ <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.classList.toggle('active');
+    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+</script>
+
+</head>
+
+
+<body>
+
+    <div id="header">THE COLORADO SYMPHONY</div>
+    <div id="navigation">
+        <nav><ul>
+        <li><a href="https://biancamz.github.io/biancasophieforrest/pages/home.html">Home</a> </li>
+        <li> <a href="https://biancamz.github.io/biancasophieforrest/pages/schedule.html">Schedule</a></li>
+        <li><a href="https://biancamz.github.io/biancasophieforrest/pages/FAQ.html">FAQ</a></li>
+        <li><a href="https://biancamz.github.io/biancasophieforrest/pages/contact.html">Contact</a></li> 
+        
+    </ul></nav>
+
+    <div id="background">
+        <div class="bottom"> </div>
+        <div class="middle"></div>
+        <div class="hands"></div>
+        </div>
+    </div>
+
+    <img src="../img/peter-civic-center-1920x600-1-1024x320.jpg" alt="person and instrument">
+    
+   <h1> Frequently Asked Questions</h1>
+
+<p>Here are some frequently asked questions about Colorado Symphony concerts that are intended to help make your visit fun, memorable, and stress-free. 
+If you don’t see the answer to your question here, feel free to contact us at tickets@coloradosymphony.org or call the Box Office at (303) 623-7876. We might even add your inquiry to this list!
+
+If you still have more questions, <a href="https://biancamz.github.io/biancasophieforrest/pages/contact.html">Contact us here</a> </p>
+
+<div class="accordion">
+    <div class="accordion-item">
+        <button class="accordion-header">Can I exchange or refund my ticket purchase?</button>
+        <div class="accordion-content">
+            <p><em>Refunds and Exchanges:</em> All sales are final. No refunds. Verify all information (title, date, time, seat selection, etc.) before purchasing tickets. ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">How do I use my on-account credit?</button>
+        <div class="accordion-content">
+            <p><em>On-Account Credit:</em> If you received on-account credit for a ticket return or exchange, you may use this credit through the concert season end ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">How do I access my tickets online?</button>
+        <div class="accordion-content">
+            <p>Colorado Symphony tickets are available within My Upcoming Events in your account at coloradosymphony.org. Step-by-step instructions on access ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">How much do Colorado Symphony tickets cost?</button>
+        <div class="accordion-content">
+            <p><em>Standard Ticketing:</em> Prices vary by concert. Base ticket prices for most concerts are $15, $38, $68, $88, and $110. Family concerts are $10 ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">What should I know before I go?</button>
+        <div class="accordion-content">
+            <p>Patrons are encouraged to arrive early due to downtown traffic, parking, security, and getting to seats before the performance begins ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">What Accessible services do you offer?</button>
+        <div class="accordion-content">
+            <p>Your Colorado Symphony is committed to providing an accessible, enjoyable concert experience for all.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">What should I wear to a Colorado Symphony concert?</button>
+        <div class="accordion-content">
+            <p>Formal attire like tuxedos and evening gowns is not required. Most concert-goers wear business or cocktail attire, but comfort is key ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">What if I am late to the concert?</button>
+        <div class="accordion-content">
+            <p>For the comfort of our musicians and patrons, late seating is at the House Manager's discretion and takes place during program pauses ...</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Can I bring food or drinks into the concert?</button>
+        <div class="accordion-content">
+            <p>Drinks purchased at venue bars may be brought into all concerts. However, food is not allowed in the Hall, including food bought in the Lobby ...</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

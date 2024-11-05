@@ -9,7 +9,7 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-const storyText = "On a misty night, the air was thick with tension as :insertx: crept through the shadows. They were heading towards :inserty:, a place whispered about in fearful tones. When they arrived, a monstrous :insertz: Bianca emerged from the darkness, its eyes glowing and breath chilling. Bianca saw the whole ordeal from behind a tree but didn't dare make a sound — after all, :insertx: was known for seeking out the most terrifying creatures.";
+const storyText = "On a misty night, the air was thick with tension as :insertx: crept through the shadows. It was heading towards :inserty:, a place whispered about in fearful tones. Upon arrival, it :insertz: Bianca saw the whole ordeal from behind a tree but didn't dare make a sound — after all, :insertx: was known to be one of the most vicious creatures.";
 const insertX = ["Grendel the Gremlin", "Mad Mortimer", "The Frost Fiend"];
 const insertY = ["The Abandoned Asylum", "Phantom Carnival", "The Haunted Manor"];
 const insertZ = ["vanished into thin air with a chilling scream.", "transformed into a swarm of bats and scattered.", "sank into the ground, leaving only a shadow behind."];

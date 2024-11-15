@@ -7,12 +7,12 @@ const fetchButton = document.getElementById('fetchButton');
 async function getJoke() {
   try {
     const response = await fetch(API_URL); 
-    if (!response.ok) throw new Error("Failed to fetch joke.");
+    if (!response.ok) throw new Error("error");
     const data = await response.json();
     displayRes(data.joke);
   } catch (error) {
     console.error(error);
-    alert("Could not fetch a joke. Please try again!");
+    alert("problem");
   }
 }
 

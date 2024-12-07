@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.geostar-fill-regular {
+    font-family: "Geostar Fill", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.terminal {
+    width: 90%;
+    max-width: 800px;
+    height: 70%;
+    background-color: #000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #ffc800;
+    display: flex;
+    flex-direction: column;
+}
+
+.output {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.name-line{
+    font-size: 40px;
+    font-family: 'Geostar Fill', 'Courier New', Courier, monospace;
+    color: #9d00ff;
+}
+
+.input-line {
+    display: flex;
+}
+
+.input-line span {
+    margin-right: 5px;
+}
+
+.command-input {
+    background: none;
+    border: none;
+    color: #ffc800;
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1;
+    outline: none;
+}
+
+.command-input:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.link {
+    color: #ff00d4;
+    cursor: pointer;
+}

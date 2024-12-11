@@ -19,7 +19,7 @@ const commands = {
 
 function executeCommand(command) {
     if (command === 'projects') {
-        window.location.href = 'https://socr6902.github.io/web/projects.html';
+        window.location.href = 'https://socr6902.github.io/web/terminal/projects.html';
         return;
     }
 

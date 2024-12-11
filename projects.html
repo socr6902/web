@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel with Titles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .carousel {
+            position: relative;
+            width: 600px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #111;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%;
+            display: block;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .carousel-buttons button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .carousel-indicators span {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background: #555;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .carousel-indicators .active {
+            background: #fff;
+        }
+        .carousel-title {
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-images" id="carouselImages">
+            <img src="icon.webp" alt="Image 1">
+            <img src="polaris.webp" alt="Image 2">
+            <img src="sports.webp" alt="Image 3">
+        </div>
+        <div class="carousel-title" id="carouselTitle">Title 1</div>
+        <div class="carousel-buttons">
+            <button id="prevBtn">&#9664;</button>
+            <button id="nextBtn">&#9654;</button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators">
+            <span data-index="0" class="active"></span>
+            <span data-index="1"></span>
+            <span data-index="2"></span>
+        </div>
+    </div>
+
+    <script>
+        const carouselImages = document.getElementById('carouselImages');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.carousel-indicators span');
+        const carouselTitle = document.getElementById('carouselTitle');
+
+        let currentIndex = 0;
+        const totalImages = indicators.length;
+
+        // Titles for each slide
+        const titles = ["CleanSweep Web Application", "Polaris Value Fund Website", "SportSphere Web Application"];
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100; // Each image is 100% width
+            carouselImages.style.transform = `translateX(${offset}%)`;
+
+            // Update indicators
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[currentIndex].classList.add('active');
+
+            // Update title
+            carouselTitle.textContent = titles[currentIndex];
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                currentIndex = parseInt(indicator.getAttribute('data-index'));
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+</html>

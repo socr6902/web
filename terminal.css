@@ -82,9 +82,9 @@ body {
 }
 
 .name-line {
-    font-family: 'Geostar Fill', sans-serif; /* Requires Orbitron font */
+    font-family: 'Geostar Fill', sans-serif; 
     font-size: 40px;
-    color: #0055ff; /* Cyan */
+    color: #0055ff; 
     text-shadow: 0 0 10px #0055ff, 0 0 20px #0055ff;
     letter-spacing: 3px;
 }

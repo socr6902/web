@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel with Titles</title>
+    <title>Image Carousel with Titles and Links</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +14,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
+        }
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #fff;
         }
         .carousel {
             position: relative;
@@ -28,6 +34,11 @@
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .carousel-images a {
+            width: 100%;
+            flex-shrink: 0;
         }
         .carousel-images img {
             width: 100%;
@@ -72,24 +83,44 @@
             background: #fff;
         }
         .carousel-title {
-            position: absolute;
-            top: 30px;
-            width: 100%;
-            text-align: center;
+            margin-top: 20px;
             font-size: 20px;
             color: #fff;
             font-weight: bold;
         }
+        .return-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #014288;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .return-button:hover {
+            background-color: #002b58;
+        }
     </style>
 </head>
 <body>
+    <a href="terminal.html" class="return-button">Return to Terminal</a>
+    <h1 class="title">My Projects</h1>
     <div class="carousel">
         <div class="carousel-images" id="carouselImages">
-            <img src="icon.webp" alt="Image 1">
-            <img src="polaris.webp" alt="Image 2">
-            <img src="sports.webp" alt="Image 3">
+            <a href="https://github.com/socr6902/cleanSweep.git" target="_blank">
+                <img src="icon.webp" alt="CleanSweep">
+            </a>
+            <a href="https://github.com/socr6902/polaris" target="_blank">
+                <img src="polaris.webp" alt="Polaris">
+            </a>
+            <a href="https://github.com/socr6902/sportSphere" target="_blank">
+                <img src="sports.webp" alt="SportSphere">
+            </a>
         </div>
-        <div class="carousel-title" id="carouselTitle">Title 1</div>
         <div class="carousel-buttons">
             <button id="prevBtn">&#9664;</button>
             <button id="nextBtn">&#9654;</button>
@@ -100,6 +131,7 @@
             <span data-index="2"></span>
         </div>
     </div>
+    <div class="carousel-title" id="carouselTitle">CleanSweep Web Application</div>
 
     <script>
         const carouselImages = document.getElementById('carouselImages');
@@ -111,18 +143,18 @@
         let currentIndex = 0;
         const totalImages = indicators.length;
 
-        // Titles for each slide
+
         const titles = ["CleanSweep Web Application", "Polaris Value Fund Website", "SportSphere Web Application"];
 
         function updateCarousel() {
-            const offset = -currentIndex * 100; // Each image is 100% width
+            const offset = -currentIndex * 100; 
             carouselImages.style.transform = `translateX(${offset}%)`;
 
-            // Update indicators
+
             indicators.forEach(indicator => indicator.classList.remove('active'));
             indicators[currentIndex].classList.add('active');
 
-            // Update title
+ 
             carouselTitle.textContent = titles[currentIndex];
         }
 

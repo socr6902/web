@@ -4,107 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Carousel with Titles and Links</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #222;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-        }
-        .title {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        .carousel {
-            position: relative;
-            width: 600px;
-            max-width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            background: #111;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        .carousel-images a {
-            width: 100%;
-            flex-shrink: 0;
-        }
-        .carousel-images img {
-            width: 100%;
-            display: block;
-        }
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .carousel-buttons button {
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: #fff;
-            font-size: 24px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .carousel-buttons button:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-        .carousel-indicators {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        .carousel-indicators span {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            background: #555;
-            border-radius: 50%;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .carousel-indicators .active {
-            background: #fff;
-        }
-        .carousel-title {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #fff;
-            font-weight: bold;
-        }
-        .return-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #5d5d5d;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .return-button:hover {
-            background-color: #282828;
-        }
-    </style>
+    <link rel="stylesheet" href="projects.css">
+
+    
 </head>
 <body>
     <a href="terminal.html" class="return-button">Return to Terminal</a>
@@ -133,47 +35,6 @@
     </div>
     <div class="carousel-title" id="carouselTitle">CleanSweep Web Application</div>
 
-    <script>
-        const carouselImages = document.getElementById('carouselImages');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const indicators = document.querySelectorAll('.carousel-indicators span');
-        const carouselTitle = document.getElementById('carouselTitle');
-
-        let currentIndex = 0;
-        const totalImages = indicators.length;
-
-
-        const titles = ["CleanSweep Web Application", "Polaris Value Fund Website", "SportSphere Web Application"];
-
-        function updateCarousel() {
-            const offset = -currentIndex * 100; 
-            carouselImages.style.transform = `translateX(${offset}%)`;
-
-
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            indicators[currentIndex].classList.add('active');
-
- 
-            carouselTitle.textContent = titles[currentIndex];
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            updateCarousel();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            updateCarousel();
-        });
-
-        indicators.forEach(indicator => {
-            indicator.addEventListener('click', () => {
-                currentIndex = parseInt(indicator.getAttribute('data-index'));
-                updateCarousel();
-            });
-        });
-    </script>
+    <script src="projects.js"></script>
 </body>
 </html>

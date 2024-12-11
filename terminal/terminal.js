@@ -16,7 +16,7 @@ const commands = {
     github: `My Github: <a class='link' href='https://github.com/socr6902' target='_blank'>https://github.com/socr6902</a>`,
     contact: `You can reach me at: <a class='link' href='mailto:socr6902@colorado.edu'>socr6902@colorado.edu</a>`,
 };
-
+//is this even working
 function executeCommand(command) {
     if (command === 'projects') {
         window.location.href = 'https://socr6902.github.io/web/terminal/projects.html';

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel with Titles and Links</title>
+    <link rel="stylesheet" href="projects.css">
+
+    
+</head>
+<body>
+    <a href="terminal.html" class="return-button">Return to Terminal</a>
+    <h1 class="title">My Projects</h1>
+    <div class="carousel">
+        <div class="carousel-images" id="carouselImages">
+            <a href="https://github.com/socr6902/cleanSweep.git" target="_blank">
+                <img src="icon.webp" alt="CleanSweep">
+            </a>
+            <a href="https://github.com/socr6902/polaris" target="_blank">
+                <img src="polaris.webp" alt="Polaris">
+            </a>
+            <a href="https://github.com/socr6902/sportSphere" target="_blank">
+                <img src="sports.webp" alt="SportSphere">
+            </a>
+        </div>
+        <div class="carousel-buttons">
+            <button id="prevBtn">&#9664;</button>
+            <button id="nextBtn">&#9654;</button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators">
+            <span data-index="0" class="active"></span>
+            <span data-index="1"></span>
+            <span data-index="2"></span>
+        </div>
+    </div>
+    <div class="carousel-title" id="carouselTitle">CleanSweep Web Application</div>
+
+    <script src="projects.js"></script>
+</body>
+</html>

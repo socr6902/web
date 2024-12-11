@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.geostar-fill-regular {
+    font-family: "Geostar Fill", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.terminal-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 2px solid #444;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    height: 70%;
+}
+
+.tab-bar {
+    background-color: #333;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: #aaa;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px solid #444;
+}
+
+.tab-bar span {
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.tab-bar-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.tab-bar-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.tab-bar-button.yellow {
+    background-color: #ffbd2e;
+}
+
+.tab-bar-button.green {
+    background-color: #27c93f;
+}
+
+.terminal {
+    flex: 1;
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.output {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.name-line {
+    font-family: 'Geostar Fill', sans-serif; 
+    font-size: 40px;
+    color: #0055ff; 
+    text-shadow: 0 0 10px #0055ff, 0 0 20px #0055ff;
+    letter-spacing: 3px;
+}
+
+
+.input-line {
+    display: flex;
+}
+
+.input-line span {
+    margin-right: 5px;
+}
+
+.command-input {
+    background: none;
+    border: none;
+    color: #ffc800;
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1;
+    outline: none;
+}
+
+.command-input:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.link {
+    color: #ff00d4;
+    cursor: pointer;
+}

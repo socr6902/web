@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Terminal Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="tab-bar">
+            <span>Terminal</span>
+            <div class="tab-bar-buttons">
+                <div class="tab-bar-button"></div>
+                <div class="tab-bar-button yellow"></div>
+                <div class="tab-bar-button green"></div>
+            </div>
+        </div>
+        <div class="terminal">
+            <div class="name-line">SOPHIE CRAWSHAW</div><br>
+            <div class="default-line">Welcome to my Linux terminal-inspired portfolio directory!</div>
+            <div class="default-line">Type <strong>help</strong> in the terminal for a list of commands</div>
+            <div class="output" id="output">
+                <!-- Terminal output content -->
+            </div>
+            <div class="input-line">
+                <span>$</span>
+                <input type="text" class="command-input" id="commandInput" autofocus placeholder="Type a command...">
+            </div>
+        </div>
+    </div>
+    <script src="terminal.js"></script>
+
+</body>
+</html>

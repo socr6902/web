@@ -9,7 +9,7 @@
         const totalImages = indicators.length;
 
 
-        const titles = ["CleanSweep Web Application", "Polaris Value Fund Website", "SportSphere Web Application"];
+        const titles = ["Polaris Value Fund Website", "CleanSweep Web Application", "SportSphere Web Application"];
 
         function updateCarousel() {
             const offset = -currentIndex * 100; 
